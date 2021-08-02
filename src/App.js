@@ -18,3 +18,8 @@ export class App extends Component {
 }
 
 export default App
+
+
+
+
+//fixed main and add eslintrc
