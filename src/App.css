@@ -36,31 +36,56 @@
     transform: rotate(360deg);
   }
 }
-body{
-  width: 90%;
+body {
+  width: 84%;
   margin: 0 auto;
-  background-color:rgb(178, 237, 252);
+  background-color: rgb(178, 237, 252);
 }
-h1{
+h1 {
   text-align: center;
   font-style: italic;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 40px;
   color: #282c34;
 }
-.main{
-  display: flex;
-  justify-content: space-between;
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+ 
 }
 
-img{
-  width: 250px;
-  height: 250px;
+.imageSize1 {
+  width: 200px;
+  height: 200px;
+  
 }
-h5{
+.imageSize2 {
+  width: 300px;
+  height: 300px;
+ 
+}
+h5 {
   text-align: center;
   background-color: black;
   color: white;
   margin-top: 15%;
   padding: 5px;
+}
+p{
+  font-weight: bold;
+}
+span{
+  font-size: 30px;
+  color: red;
+  margin-left: 20px;
+  
+}
+
+.counter{
+  width: 300px;
+  height: 550px;
+  padding: 5px;
+
 }
