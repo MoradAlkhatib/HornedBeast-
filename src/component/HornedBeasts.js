@@ -13,6 +13,12 @@ class HornedBeasts extends Component {
     this.setState({
       fav: this.state.fav + 1,
     });
+
+    this.props.fromChild(
+      this.props.best.title,
+      this.props.best.description,
+      true
+    );
   };
   setIsShown = (name) => {
     this.setState({
@@ -23,8 +29,6 @@ class HornedBeasts extends Component {
   render() {
     return (
       <div className='counter'>
-        <h2>{this.props.best.title}</h2>
-
         <Col xs={6} md={4}>
           <Image
             onMouseEnter={() => this.setIsShown(true)}
@@ -35,13 +39,13 @@ class HornedBeasts extends Component {
             rounded
           />
         </Col>
-        <p>
-          Favorite: {this.state.fav} <span>&#9825;</span>
-        </p>
-        <p>{this.props.best.description}</p>
       </div>
     );
   }
 }
 
 export default HornedBeasts;
+
+//<h2>{this.props.best.title}</h2>
+
+// <p>{this.props.best.description}</p>
