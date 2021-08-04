@@ -49,12 +49,12 @@ class SelectedBeast extends Component {
             {/* <p>
               Favorite: {this.state.fav} <span>&#9825;</span>
             </p>
-            <Button variant="success" size="lg" onClick={this.increase}>
+            <Button variant='success' size='lg' onClick={this.increase}>
               Vote
             </Button> */}
             <Button
-              variant="danger"
-              size="lg"
+              variant='danger'
+              size='lg'
               onClick={() => this.makeShow(false)}
             >
               Close
