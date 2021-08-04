@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import HornedBeasts from './HornedBeasts';
-
+import data from '../dataBeats.json';
 class Main extends Component {
   constructor() {
     super();
@@ -17,25 +17,35 @@ class Main extends Component {
     state.descriptions = disBeast;
     state.url = url;
     this.setState(state);
-    console.log(this.state.title);
-    console.log(this.state.descriptions);
-    console.log(this.state.url);
     this.props.fromMain(titleBeast, disBeast, url);
   };
 
   render() {
     return (
       <div className='main'>
-        {this.props.data.map((element) => {
-          return (
-            <HornedBeasts
-              best={element}
-              key={element.title}
-              className='card'
-              fromChild={this.getHorned}
-            />
-          );
-        })}
+        {this.props.numberHorn === 0
+          ? data.map((element) => {
+            return (
+              <HornedBeasts
+                best={element}
+                key={element.title}
+                className='card'
+                fromChild={this.getHorned}
+              />
+            );
+          })
+          : data.map((element) => {
+            return (
+              element.horns === this.props.numberHorn && (
+                <HornedBeasts
+                  best={element}
+                  key={element.title}
+                  className='card'
+                  fromChild={this.getHorned}
+                />
+              )
+            );
+          })}
       </div>
     );
   }

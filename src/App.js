@@ -6,6 +6,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import dataBeats from './dataBeats.json';
 import SelectedBeast from './component/SelectedBeast';
+import FormHorne from './component/FormHorne';
+//import FormHorne from './component/FormHorne';
 export class App extends Component {
   constructor() {
     super();
@@ -13,10 +15,11 @@ export class App extends Component {
       title: '',
       descriptions: '',
       show: false,
-      url:''
+      url: '',
+      horns: 0,
     };
   }
-  getDataFromMain = (mainTitle, mainDis,url) => {
+  getDataFromMain = (mainTitle, mainDis, url) => {
     let state = this.state;
     state.title = mainTitle;
     state.descriptions = mainDis;
@@ -30,6 +33,13 @@ export class App extends Component {
   makeShowFalse = () => {
     this.setState({ show: false });
   };
+  getDataFromForm = (horns) => {
+    let state=this.state;
+    state.horns=horns;
+    this.setState(state);
+    console.log(this.state.horns);
+  };
+
   render() {
     return (
       <div>
@@ -42,7 +52,8 @@ export class App extends Component {
             beatsUnShow={this.makeShowFalse}
           />
         )}
-        <Main data={dataBeats} fromMain={this.getDataFromMain} />
+        <FormHorne formHorne={this.getDataFromForm} />
+        <Main data={dataBeats} fromMain={this.getDataFromMain} numberHorn={this.state.horns}/>
         <Footer />
       </div>
     );
