@@ -13,12 +13,14 @@ export class App extends Component {
       title: '',
       descriptions: '',
       show: false,
+      url:''
     };
   }
-  getDataFromMain = (mainTitle, mainDis) => {
+  getDataFromMain = (mainTitle, mainDis,url) => {
     let state = this.state;
     state.title = mainTitle;
     state.descriptions = mainDis;
+    state.url = url;
     state.show = true;
     this.setState(state);
     console.log(this.state.title);
@@ -36,6 +38,7 @@ export class App extends Component {
           <SelectedBeast
             beatsTitle={this.state.title}
             beatsDescriptions={this.state.descriptions}
+            beatsUrl={this.state.url}
             beatsUnShow={this.makeShowFalse}
           />
         )}

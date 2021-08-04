@@ -7,20 +7,20 @@ class Main extends Component {
     this.state = {
       title: '',
       descriptions: '',
-      show: true,
+      url: '',
     };
   }
 
-  getHorned = (titleBeast, disBeast, show) => {
+  getHorned = (titleBeast, disBeast, url) => {
     let state = this.state;
     state.title = titleBeast;
     state.descriptions = disBeast;
-    state.show = this.state.show;
+    state.url = url;
     this.setState(state);
     console.log(this.state.title);
     console.log(this.state.descriptions);
-    console.log(this.state.show);
-    this.props.fromMain(titleBeast, disBeast, show);
+    console.log(this.state.url);
+    this.props.fromMain(titleBeast, disBeast, url);
   };
 
   render() {

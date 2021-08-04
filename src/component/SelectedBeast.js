@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal, Button ,Image } from 'react-bootstrap';
 class SelectedBeast extends Component {
   constructor() {
     super();
@@ -26,28 +26,37 @@ class SelectedBeast extends Component {
   render() {
     return (
       <>
-        {/* <Button variant="primary" onClick={() => this.makeShow(true)}>
+        {/* <Button variant='primary' onClick={() => this.makeShow(true)}>
           Launch static backdrop modal
         </Button> */}
 
         <Modal
           show={this.state.setShow}
           onHide={this.makeClose}
-          backdrop="static"
+          backdrop='static'
           keyboard={false}
         >
           <Modal.Header>
             <Modal.Title>{this.props.beatsTitle}</Modal.Title>
           </Modal.Header>
-          <Modal.Body>{this.props.beatsDescriptions}</Modal.Body>
+          <Modal.Body className='modelBody'>
+            {' '}
+            <Image onClick={this.increase} src={this.props.beatsUrl} rounded className='imageSize3'/>
+            <br/>
+            {this.props.beatsDescriptions}
+          </Modal.Body>
           <Modal.Footer>
-            <p>
+            {/* <p>
               Favorite: {this.state.fav} <span>&#9825;</span>
             </p>
-            <Button variant="success" size='lg' onClick={this.increase}>
+            <Button variant="success" size="lg" onClick={this.increase}>
               Vote
-            </Button>
-            <Button variant="danger" size='lg' onClick={() => this.makeShow(false)}>
+            </Button> */}
+            <Button
+              variant="danger"
+              size="lg"
+              onClick={() => this.makeShow(false)}
+            >
               Close
             </Button>
           </Modal.Footer>
@@ -56,5 +65,5 @@ class SelectedBeast extends Component {
     );
   }
 }
-
+// beatsUrl
 export default SelectedBeast;

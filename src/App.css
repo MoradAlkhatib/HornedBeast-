@@ -69,6 +69,17 @@ h1 {
   height: 250px;
  
 }
+.imageSize3 {
+  width: 450px;
+  height: 250px;
+ 
+ 
+}
+.modelBody{
+  font-size: 25px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
 h5 {
   text-align: center;
   background-color: black;
@@ -78,10 +89,10 @@ h5 {
 }
 p{
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
 }
 span{
-  font-size: 30px;
+  font-size: 20px;
   color: red;
   font-weight: 900;
   margin-left: 20px;
