@@ -31,12 +31,15 @@ class HornedBeasts extends Component {
         >
           {this.props.best.title}
         </Card.Title>
+        <head style={{textAlign:'center'}}>
         <Card.Img
+          
           variant='top'
           src={this.props.best.image_url}
           className='imageSize2'
           onClick={this.increase}
         />
+        </head>
         <Card.Body>
           <Card.Text style={{ fontSize: '15px' }}>
             Some quick example text to build on the card title and make up the
