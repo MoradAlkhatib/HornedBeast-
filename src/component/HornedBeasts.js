@@ -34,7 +34,7 @@ class HornedBeasts extends Component {
         <Card.Img
           variant='top'
           src={this.props.best.image_url}
-          className='imageSize3'
+          className='imageSize2'
           onClick={this.increase}
         />
         <Card.Body>

@@ -36,11 +36,7 @@
     transform: rotate(360deg);
   }
 }
-body {
-  width: 84%;
-  margin: 0 auto;
-  background-color: rgb(178, 237, 252);
-}
+
 h1 {
   text-align: center;
   font-style: italic;
@@ -53,17 +49,11 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
-  margin-left: 200px;
+  margin-left: 50px;
   margin-top: 50px;
  
 }
 
-.imageSize1 {
-  width: 200px;
-  height: 200px;
-  padding: 30px;
-  
-}
 .imageSize2 {
   width: 250px;
   height: 250px;
